@@ -1,8 +1,9 @@
 {
   "name": "@efstajas/gql-iterate",
   "type": "module",
-  "version": "0.1.1",
-  "description": "A CL tool for running a GraphQL query repeatedly with changing variable values from a CSV file.",
+  "version": "0.1.2",
+  "description": "🔁📃🪐 A CL tool for running the same GQL query repeatedly with variable values from a CSV.",
+  "keywords": ["GraphQL", "CSV", "utility", "command-line", "cli", "tool"],
   "main": "./bin/cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"
