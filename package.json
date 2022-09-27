@@ -2,10 +2,18 @@
   "name": "@efstajas/gql-iterate",
   "version": "0.1.2",
   "description": "🔁📃🪐 A CL tool for running the same GQL query repeatedly with variable values from a CSV.",
-  "keywords": ["GraphQL", "CSV", "utility", "command-line", "cli", "tool"],
+  "keywords": [
+    "GraphQL",
+    "CSV",
+    "utility",
+    "command-line",
+    "cli",
+    "tool"
+  ],
   "main": "./bin/cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node bin/cli.js --host $npm_config_host --input $npm_config_input --query $npm_config_query --bearer $npm_config_bearer --concurrency $npm_config_concurrency"
   },
   "publishConfig": {
     "access": "public"
@@ -13,6 +21,7 @@
   "author": "Jason Efstathiou",
   "license": "MIT",
   "dependencies": {
+    "bottleneck": "^2.19.5",
     "graphql": "^15.4.0",
     "graphql-request": "^3.4.0",
     "readline-sync": "^1.4.10",
@@ -21,5 +30,8 @@
   "bin": {
     "@efstajas/gql-iterate": "./bin/cli.js",
     "gql-iterate": "./bin/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23"
   }
 }

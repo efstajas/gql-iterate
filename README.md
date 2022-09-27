@@ -51,3 +51,7 @@ GQL-Iterate will now run all of your queries (this might take a while depending 
 ## 🗝 Authentication
 
 GQL-iterate currently only supports `Authorization: Bearer` Header-based auth. To supply a bearer token, simply run the CLI with the `--bearer < your token >` option.
+
+## Concurrency
+
+If you want to control how many rows are processed in parallel (i.e. you have some rate limit on you API) you can use param `--concurrency`. By default it is set to 0 which means that all of the rows are processed in parallel. If you want it to work sequentially set `concurrency` to 1.
